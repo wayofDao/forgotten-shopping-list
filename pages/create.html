@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Create shopping list</title>
+</head>
+<body>
+    <main>
+        <h1 class="title">New list</h1>
+        <!-- <button class="button add">Add</button> -->
+        <form id="productForm">
+            <div class="inputContainer">
+                <div class="formInput long">
+                    <label for="productName">product</label>
+                    <input id="productName" name="productName" type="text">
+                </div>
+                <div class="formInput short">
+                    <label for="quantity">qty</label>
+                    <input id="quantity" name="quantity" type="number" step="1" value="1">
+                </div>
+                <div class="formInput short">
+                    <label for="mesure">unit</label>
+                    <select name="mesure" id="mesure">
+                        <option value="u">unit</option>
+                        <option value="g">grams</option>
+                        <option value="ml">milliliters</option>
+                    </select>
+                </div>
+            </div>
+            <input type="submit" class="button--round" value="add to list">
+        </form>
+        <div id="divList"></div>
+    </main>
+    <script src="../main.js"></script>
+</body>
+</html>
