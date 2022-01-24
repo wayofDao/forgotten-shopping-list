@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <h1 class="title">New list</h1>
+        <h1 class="title">Create list</h1>
         <!-- <button class="button add">Add</button> -->
         <form id="productForm">
             <div class="inputContainer">
@@ -30,9 +30,16 @@
                     </select>
                 </div>
             </div>
-            <input type="submit" class="button--round" value="add to list">
+            <input type="submit" class="button--round button--add" value="add to list">
         </form>
-        <div id="divList"></div>
+        <div id="productList"></div>
+        <div class="save-container">
+            <div class="formInput">
+                <label for="listName">list name</label>
+                <input id="listName" name="listName" type="text">
+            </div>
+            <button class="button--round" id="save">Save</button>
+        </div>
     </main>
     <script src="../main.js"></script>
 </body>
