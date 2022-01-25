@@ -1,7 +1,7 @@
 :root {
     --primary-color: rgb(54, 64, 94);
 }
-button {
+a, button, input, select {
     all: initial;
 }
 * {
@@ -13,11 +13,21 @@ button {
     background-color: var(--primary-color);
     color:white;
     font-weight: 100;
+    padding-block: 0.2rem;
+}
+body {
+    background-color: rgb(243, 241, 241);
 }
 
 main {
+    position: relative;
     max-width: 400px;
+    min-height: 500px;
+    padding: 1rem;
     margin: auto;
+    background-color: white;
+    box-shadow: 0px 2px 5px var(--primary-color)
+    ;
 }
 .control {
     display: flex;
@@ -35,10 +45,83 @@ main {
     border: 1px var(--primary-color) solid;
     min-width: 100px;
 }
+.button--small {
+    font-family: 'Montserrat', sans-serif;
+    color:var(--primary-color);
+    text-align: center;
+    padding: 7px 14px;
+    border-radius: 10px;
+    border: 1px var(--primary-color) solid;
+}
+.button--round {
+    font-family: 'Montserrat', sans-serif;
+    color:var(--primary-color);
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px var(--primary-color) solid;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+}
+.button--add {
+    display: flex;
+    margin-left: auto;
+}
 .bold {
     font-weight: 700;
 }
-.button:hover {
+.button:hover, .button--round:hover {
     font-weight: 700;
     box-shadow: 0px 2px 5px var(--primary-color);
+    cursor: pointer;
+}
+.prodItem {
+    margin-top: 1rem;
+    display: flex;
+    align-items: baseline;
+}
+.completed span {
+    text-decoration: line-through;
+}
+.completed {
+    background-color: rgb(243, 241, 241);
+}
+.inputContainer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.formInput {
+    display:flex;
+    flex-direction: column;
+}
+.long{
+    width: 70%;
+}
+.short {
+    margin-left: 10px;
+    width: 15%;
+}
+.formInput input, .formInput select {
+    margin-block: 0.5rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+.product {
+    flex: 4;
+}
+.quantity {
+    flex: 1;
+}
+#productList {
+    max-height: 265px;
+    overflow-y: scroll;
+}
+.save-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    gap: 1rem;
+    padding: 1rem;
 }
