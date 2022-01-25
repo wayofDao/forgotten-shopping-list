@@ -5,9 +5,12 @@ const shopList = document.querySelector('#shopList');
 const productList = document.querySelector('#productList');
 const saveButton = document.querySelector('#save');
 
-
-productForm.addEventListener('submit', submitProduct);
-saveButton.addEventListener('click', saveList);
+if(productForm) {
+    productForm.addEventListener('submit', submitProduct);
+}
+if(saveButton) {
+    saveButton.addEventListener('click', saveList);
+}
 
 function submitProduct(e) {
     e.preventDefault()
