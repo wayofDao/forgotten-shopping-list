@@ -54,7 +54,7 @@ function saveList() {
     if(listName && listName.length > 0) {
         let storedLists = JSON.parse(localStorage.getItem('myLists'));
         let myLists = storedLists || {};
-        myLists[listName.trim().replace(" ", "_")] = tempList;
+        myLists[listName.trim().replace(" ", "_").replace(".","")] = tempList;
     
         localStorage.setItem('myLists', JSON.stringify(myLists))
     } else {
