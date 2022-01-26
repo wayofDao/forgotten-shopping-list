@@ -3,6 +3,7 @@
 }
 a, button, input, select {
     all: initial;
+    font-family: 'Montserrat', sans-serif;
 }
 * {
     font-family: 'Montserrat', sans-serif;
@@ -134,5 +135,27 @@ main a {
     cursor: pointer;
 }
 .load-list:hover {
-    background-color: rgb(243, 241, 241);;
+    background-color: rgb(243, 241, 241);
+}
+#listItems div {
+    display:flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin-block: 0.2rem;
+    font-size: 1.3rem;
+}
+#listItems div.done {
+    text-decoration: line-through;
+    background-color: rgb(243, 241, 241);
+}
+.left-side {
+    flex: 1;
+    text-align: end;
+    padding-right: 0.5rem;
+    border-right: 1px solid var(--primary-color);
+}
+.right-side {
+    padding-left: 1rem;
+    flex: 3;
 }
